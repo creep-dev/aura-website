@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA | Uncap Pure Joy</title>
+    <meta name="description" content="Experience the refreshing taste of Aura. Global beverage brand offering classic, zero sugar, and limited edition flavors.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: '#E60000',
+                        brandBlack: '#111111',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for specific micro-interactions -->
+    <style>
+        .fizz-hover:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(230, 0, 0, 0.2), 0 10px 10px -5px rgba(230, 0, 0, 0.1);
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-white text-brandBlack font-sans antialiased overflow-x-hidden">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-black text-white tracking-tighter">AURA.</a>
+            <div class="hidden md:flex space-x-8 text-white font-semibold">
+                <a href="#products" class="hover:text-brandRed transition">Shop</a>
+                <a href="#story" class="hover:text-brandRed transition">Our Story</a>
+                <a href="#campaign" class="hover:text-brandRed transition">Rewards</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-white hover:text-brandRed transition" aria-label="Search">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </button>
+                <button class="bg-brandRed text-white px-6 py-2 rounded-full font-bold hover:bg-red-700 transition shadow-lg transform hover:scale-105" aria-label="Cart">
+                    Cart (0)
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden bg-brandBlack">
+        <!-- Placeholder for Video Background -->
+        <img src="https://images.unsplash.com/photo-1556881286-fc6915169721?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Ice cold beverage" class="absolute inset-0 w-full h-full object-cover opacity-50 hero-bg">
+        <div class="absolute inset-0 bg-gradient-to-t from-brandBlack via-transparent to-transparent"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl gs-reveal">
+            <h1 class="text-6xl md:text-8xl font-black text-white mb-6 leading-tight uppercase tracking-tight">
+                Taste The <br> <span class="text-brandRed">Feeling.</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-200 mb-10 font-medium">Spark your senses with the ultimate refreshment.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#products" class="bg-brandRed text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-red-700 transition shadow-[0_0_20px_rgba(230,0,0,0.4)] transform hover:-translate-y-1">
+                    Shop Now
+                </a>
+                <a href="#story" class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-brandBlack transition transform hover:-translate-y-1">
+                    Watch the Film
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PRODUCT SHOWCASE -->
+    <section id="products" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-16 gs-reveal">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight">Iconic <span class="text-brandRed text-outline">Flavors</span></h2>
+                    <p class="text-gray-500 mt-2 text-lg">Pick your perfect refreshment.</p>
+                </div>
+                <a href="#" class="hidden md:block font-bold text-brandRed hover:underline">View All Products &rarr;</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Product 1 -->
+                <div class="bg-gray-50 rounded-3xl p-8 flex flex-col items-center fizz-hover transition-all duration-300 gs-reveal">
+                    <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Aura Classic" class="h-64 object-contain mb-6 drop-shadow-2xl">
+                    <h3 class="text-2xl font-bold mb-2">Aura Classic</h3>
+                    <p class="text-gray-500 mb-6 text-center">The original bold, crisp taste.</p>
+                    <button class="w-full bg-brandBlack text-white py-3 rounded-full font-bold hover:bg-brandRed transition">Quick Add - $1.99</button>
+                </div>
+                <!-- Product 2 -->
+                <div class="bg-gray-50 rounded-3xl p-8 flex flex-col items-center fizz-hover transition-all duration-300 gs-reveal" style="transition-delay: 100ms;">
+                    <img src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Aura Zero" class="h-64 object-contain mb-6 drop-shadow-2xl grayscale">
+                    <div class="bg-black text-white text-xs font-bold px-3 py-1 rounded-full absolute top-6 right-6">ZERO SUGAR</div>
+                    <h3 class="text-2xl font-bold mb-2">Aura Zero</h3>
+                    <p class="text-gray-500 mb-6 text-center">All the taste, zero the guilt.</p>
+                    <button class="w-full bg-brandBlack text-white py-3 rounded-full font-bold hover:bg-brandRed transition">Quick Add - $1.99</button>
+                </div>
+                <!-- Product 3 -->
+                <div class="bg-gray-50 rounded-3xl p-8 flex flex-col items-center fizz-hover transition-all duration-300 gs-reveal" style="transition-delay: 200ms;">
+                    <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Aura Cherry" class="h-64 object-contain mb-6 drop-shadow-2xl hue-rotate-30">
+                    <div class="bg-brandRed text-white text-xs font-bold px-3 py-1 rounded-full absolute top-6 right-6">LIMITED</div>
+                    <h3 class="text-2xl font-bold mb-2">Aura Cherry Blast</h3>
+                    <p class="text-gray-500 mb-6 text-center">A burst of wild cherry flavor.</p>
+                    <button class="w-full bg-brandBlack text-white py-3 rounded-full font-bold hover:bg-brandRed transition">Quick Add - $2.49</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMOTION / CAMPAIGN -->
+    <section id="campaign" class="py-20 bg-brandRed text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="md:w-1/2 gs-reveal">
+                <span class="font-bold tracking-widest text-red-200 uppercase text-sm mb-4 block">Summer Campaign</span>
+                <h2 class="text-5xl md:text-7xl font-black mb-6 leading-none">SHARE <br> THE MAGIC.</h2>
+                <p class="text-xl mb-8 font-medium text-red-100">Get a free personalized bottle when you buy a 12-pack. Offer ends soon.</p>
+                
+                <!-- Countdown Timer -->
+                <div class="flex space-x-4 mb-8">
+                    <div class="bg-white text-brandRed rounded-lg p-3 w-20 text-center shadow-lg">
+                        <span class="block text-3xl font-black">02</span>
+                        <span class="text-xs font-bold uppercase">Days</span>
+                    </div>
+                    <div class="bg-white text-brandRed rounded-lg p-3 w-20 text-center shadow-lg">
+                        <span class="block text-3xl font-black">14</span>
+                        <span class="text-xs font-bold uppercase">Hours</span>
+                    </div>
+                    <div class="bg-white text-brandRed rounded-lg p-3 w-20 text-center shadow-lg">
+                        <span class="block text-3xl font-black">45</span>
+                        <span class="text-xs font-bold uppercase">Mins</span>
+                    </div>
+                </div>
+
+                <button class="bg-brandBlack text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-brandBlack transition transform hover:scale-105">
+                    Claim Your Bottle
+                </button>
+            </div>
+            <div class="md:w-1/2 relative gs-reveal">
+                <img src="https://images.unsplash.com/photo-1527018601619-a508a2be00cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="People sharing drinks" class="rounded-3xl shadow-2xl z-10 relative transform -rotate-2 hover:rotate-0 transition duration-500">
+                <!-- Decorative element -->
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-red-500 rounded-full blur-3xl opacity-50"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMAIL CAPTURE -->
+    <section class="py-24 bg-brandBlack text-white text-center">
+        <div class="max-w-3xl mx-auto px-6 gs-reveal">
+            <h2 class="text-4xl font-black mb-4 uppercase tracking-tight">Join The Aura Club</h2>
+            <p class="text-gray-400 mb-8 text-lg">Sign up for exclusive drops, secret flavors, and 15% off your first order.</p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="Enter your email" required class="flex-1 bg-gray-800 text-white px-6 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-brandRed">
+                <button type="submit" class="bg-brandRed px-8 py-4 rounded-full font-bold hover:bg-red-700 transition">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white pt-16 pb-8 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div>
+                <a href="#" class="text-3xl font-black text-brandBlack tracking-tighter mb-4 block">AURA.</a>
+                <p class="text-gray-500 text-sm">Refreshing the world, one sip at a time. Join the global movement of joy.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-sm tracking-wider">Shop</h4>
+                <ul class="space-y-2 text-gray-500 text-sm">
+                    <li><a href="#" class="hover:text-brandRed transition">All Products</a></li>
+                    <li><a href="#" class="hover:text-brandRed transition">Zero Sugar</a></li>
+                    <li><a href="#" class="hover:text-brandRed transition">Merchandise</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-sm tracking-wider">Brand</h4>
+                <ul class="space-y-2 text-gray-500 text-sm">
+                    <li><a href="#" class="hover:text-brandRed transition">Our Story</a></li>
+                    <li><a href="#" class="hover:text-brandRed transition">Sustainability</a></li>
+                    <li><a href="#" class="hover:text-brandRed transition">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-sm tracking-wider">Follow Us</h4>
+                <div class="flex space-x-4">
+                    <!-- Social Icons Placeholders -->
+                    <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-brandRed hover:text-white transition"><span class="font-bold text-xs">IG</span></a>
+                    <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-brandRed hover:text-white transition"><span class="font-bold text-xs">TT</span></a>
+                    <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-brandRed hover:text-white transition"><span class="font-bold text-xs">X</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+            <p>&copy; 2026 Aura Beverage Co. All rights reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-brandBlack">Privacy Policy</a>
+                <a href="#" class="hover:text-brandBlack">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        // Register ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-brandBlack', 'shadow-lg');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('bg-brandBlack', 'shadow-lg');
+                navbar.classList.remove('py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+
+        // Hero Parallax
+        gsap.to('.hero-bg', {
+            yPercent: 30,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "header",
+                start: "top top",
+                end: "bottom top",
+                scrub: true
+            } 
+        });
+
+        // Scroll Reveals
+        const revealElements = document.querySelectorAll('.gs-reveal');
+        revealElements.forEach((elem) => {
+            gsap.fromTo(elem, 
+                { autoAlpha: 0, y: 50 }, 
+                { 
+                    duration: 1, 
+                    autoAlpha: 1, 
+                    y: 0, 
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top 85%", // Triggers when the top of element hits 85% of viewport
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+    </script>
+</body>
+</html>
